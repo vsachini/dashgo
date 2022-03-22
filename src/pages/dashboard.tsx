@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 import { Header } from '../components/Header'
 import { Sidebar } from '../components/Sidebar'
 
-const options = {
+const options: any = {
   chart: {
     toolbar: {
       show: false,
@@ -55,7 +55,7 @@ export default function Dashboard() {
       <Flex w="100%" my="6" maxW={1480} mx="auto" px="6">
         <Sidebar />
 
-        <SimpleGrid flex="1" gap="4" minChildWidth="320px" align="flex-start">
+        <SimpleGrid flex="1" gap="4" minChildWidth="320px">
           <Box p={['6', '8']} bg="gray.800" borderRadius="8" pb="4">
             <Text fontSize="lg">Inscritos da semana</Text>
             <Chart options={options} series={series} type="area" height={160} />
